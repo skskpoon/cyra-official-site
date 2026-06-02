@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CYRA | NEWS ARCHIVE</title>
+    <meta
+      name="description"
+      content="AIアイドルプロジェクトCYRAのNEWS ARCHIVEです。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html#top" aria-label="CYRA TOP">
+        <img
+          class="brand-image"
+          src="./assets/images/logo/cyra-logo.png.png"
+          data-source="./assets/images/logo/cyra-logo.png.png"
+          alt="CYRA"
+        />
+        <span class="brand-tagline">CYBERNETIC YOUTH REALITY AGENCY</span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="./index.html#top">TOP</a>
+        <a href="./index.html#talents">TALENTS</a>
+        <a class="is-active" href="./index.html#news">NEWS</a>
+        <a href="./index.html#account">ACCOUNT</a>
+      </nav>
+
+      <div class="header-actions" aria-label="Social links">
+        <a href="#" aria-label="TikTok">♪</a>
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="site-nav"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="news-archive"
+        class="all-news-section"
+        aria-labelledby="all-news-title"
+      >
+        <div class="all-news-inner">
+          <div class="section-heading">
+            <p class="section-kicker">ALL NEWS</p>
+            <h2 id="all-news-title">NEWS ARCHIVE</h2>
+            <p>CYRAのすべてのお知らせを最新順で表示します。</p>
+          </div>
+          <div id="all-news-list" class="news-list all-news-list" aria-live="polite"></div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-logo" href="./index.html#top">CYRA</a>
+      <span class="barcode" aria-hidden="true"></span>
+      <p>サイバネティック・ユース・リアリティ・エージェンシー</p>
+      <p>&copy; <span id="current-year"></span> CYRA. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./data/talents.js"></script>
+    <script src="./data/news.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

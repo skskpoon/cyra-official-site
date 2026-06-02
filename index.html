@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CYRA | Cybernetic Youth Reality Agency</title>
+    <meta
+      name="description"
+      content="AIアイドルプロジェクトCYRAの公式サイトです。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="CYRA TOP">
+        <img
+          class="brand-image"
+          src="./assets/images/logo/cyra-logo.png.png"
+          data-source="./assets/images/logo/cyra-logo.png.png"
+          alt="CYRA"
+        />
+        <span class="brand-tagline">CYBERNETIC YOUTH REALITY AGENCY</span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#top">TOP</a>
+        <a href="#talents">TALENTS</a>
+        <a href="#news">NEWS</a>
+        <a href="#account">ACCOUNT</a>
+      </nav>
+
+      <div class="header-actions" aria-label="Social links">
+        <a href="#" aria-label="TikTok">♪</a>
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="site-nav"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="top" class="page-section home-section" aria-labelledby="home-title">
+        <div class="home-backdrop" aria-hidden="true"></div>
+        <div class="home-layout">
+          <div class="home-copy">
+            <p class="section-kicker">サイバネティック・ユース・リアリティ・エージェンシー</p>
+            <h1 id="home-title" class="home-title">
+              <span>CYBERNETIC</span>
+              <span>YOUTH</span>
+              <span>REALITY</span>
+              <span>AGENCY</span>
+            </h1>
+            <p class="home-text">
+              CYRA（サイラ）は、サイバーパンクな未来を舞台に、AIと人間の境界を超えて輝くタレントたちを発掘し、リアルとバーチャルの垣根を越えた新しいリアリティを創造する次世代タレントエージェンシーです。
+            </p>
+            <a class="cyber-button" href="#talents">
+              <span>VIEW TALENTS</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <aside class="home-talent" aria-label="Featured talent">
+            <p class="talent-number">001</p>
+            <h2>夜永レイナ</h2>
+            <p>REINA YONAGA</p>
+            <p class="talent-role">AI IDOL / CYRA TALENT</p>
+            <a class="outline-button" href="#reina">
+              <span>VIEW PROFILE</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </aside>
+
+          <aside class="home-news" aria-label="Latest news">
+            <div class="panel-heading">
+              <h2>NEWS</h2>
+              <a href="#news">VIEW ALL</a>
+            </div>
+            <div id="home-news-list" class="home-news-list"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        id="talents"
+        class="page-section talents-section"
+        aria-labelledby="talents-title"
+      >
+        <div class="section-frame">
+          <div class="section-heading">
+            <p class="section-kicker">所属タレント一覧</p>
+            <h2 id="talents-title">TALENTS</h2>
+            <p>CYRAに所属する次世代タレントたちをご紹介します。</p>
+          </div>
+
+          <div id="talent-list" class="talent-grid" aria-live="polite"></div>
+
+          <div class="mission-strip">
+            <div class="mission-media">
+              <img
+                src="./assets/images/headquarters/hp-exterior.png.png"
+                data-source="./assets/images/headquarters/hp-exterior.png.png"
+                alt="CYRA headquarters exterior"
+              />
+            </div>
+            <h3>CYRA MISSION</h3>
+            <p>
+              サイバネティックな未来を舞台に、AIと人間の境界を超えて輝くタレントたちを発掘し、リアルとバーチャルの垣根を越えた新しいリアリティを創造する次世代タレントエージェンシー。
+            </p>
+            <span class="barcode" aria-hidden="true"></span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="reina"
+        class="page-section profile-section"
+        aria-labelledby="featured-talent-name"
+      >
+        <div class="profile-shell">
+          <a class="back-link" href="#talents">← BACK TO TALENTS</a>
+
+          <figure class="profile-media">
+            <img
+              id="featured-talent-image"
+              src="./assets/images/talents/reina/website/profile.png.jpg"
+              alt="夜永レイナのキービジュアル"
+            />
+            <figcaption>
+              <span>001</span>
+              <span>CYRA TALENT ID</span>
+            </figcaption>
+          </figure>
+
+          <article class="profile-panel">
+            <div class="profile-id">
+              <span>001</span>
+              <small>CYRA TALENT ID</small>
+            </div>
+
+            <p class="section-kicker">AI IDOL / CYRA TALENT</p>
+            <h2 id="featured-talent-name">夜永レイナ</h2>
+            <p id="featured-talent-romaji" class="romaji">REINA YONAGA</p>
+            <p id="featured-talent-profile" class="profile-text"></p>
+
+            <div class="profile-columns">
+              <section class="profile-block" aria-labelledby="profile-heading">
+                <h3 id="profile-heading">PROFILE</h3>
+                <dl id="profile-details" class="profile-details"></dl>
+              </section>
+
+              <section class="profile-block" aria-labelledby="sns-heading">
+                <h3 id="sns-heading">SNS</h3>
+                <div id="sns-list" class="sns-list"></div>
+              </section>
+            </div>
+
+            <section class="profile-block gallery-block" aria-labelledby="gallery-heading">
+              <h3 id="gallery-heading">GALLERY</h3>
+              <div id="gallery-list" class="gallery-list"></div>
+            </section>
+
+            <div class="media-samples">
+              <section class="profile-block voice-sample" aria-labelledby="voice-heading">
+                <h3 id="voice-heading">VOICE SAMPLE</h3>
+                <div class="waveform">
+                  <p>UNDER DEVELOPMENT</p>
+                </div>
+              </section>
+
+              <section class="profile-block movie-sample" aria-labelledby="movie-heading">
+                <h3 id="movie-heading">MOVIE</h3>
+                <div class="movie-frame">
+                  <p>UNDER PRODUCTION</p>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="news" class="page-section news-section" aria-labelledby="news-title">
+        <div class="news-layout">
+          <div class="news-main">
+            <div class="section-heading compact-heading">
+              <p class="section-kicker">お知らせ</p>
+              <h2 id="news-title">NEWS</h2>
+              <p>CYRAに関する最新情報や、所属タレントの活動情報をお届けします。</p>
+            </div>
+            <div id="news-list" class="news-list" aria-live="polite"></div>
+          </div>
+
+          <aside class="news-aside" aria-label="Upcoming talents">
+            <div class="aside-visual" aria-hidden="true"></div>
+            <div class="upcoming-panel">
+              <h3>UPCOMING</h3>
+              <p><span>003</span> NEW TALENT<br />COMING SOON</p>
+              <p><span>004</span> NEW TALENT<br />COMING SOON</p>
+              <a class="outline-button" href="#talents">
+                <span>VIEW ALL TALENTS</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="account" class="account-section" aria-labelledby="account-title">
+        <div class="account-inner">
+          <div class="section-heading">
+            <p class="section-kicker">SIGNAL ID</p>
+            <h2 id="account-title">SIGNAL ID</h2>
+            <p>
+              CYRA ACCOUNT は、SIGNAL ID を表示するためのアクセスカードです。
+              SIGNAL ID は、CYRAに接続するメンバーごとに発行される識別コードです。
+              アクセス権限は、今後公開予定の限定コンテンツやSIGNAL LOGへの接続状態を示します。
+              現在、SIGNAL ID の発行は準備中です。
+            </p>
+          </div>
+
+          <div class="account-panel" aria-label="Account feature status">
+            <dl class="account-status">
+              <div>
+                <dt>SIGNAL ID</dt>
+                <dd>CYRA-XXXXXX</dd>
+              </div>
+              <div>
+                <dt>登録日</dt>
+                <dd>未発行</dd>
+              </div>
+              <div>
+                <dt>アクセス権限</dt>
+                <dd>ロック中</dd>
+              </div>
+              <div>
+                <dt>アクセス状態</dt>
+                <dd>ロック中</dd>
+              </div>
+            </dl>
+
+            <button class="locked-button" type="button" disabled>
+              SIGNAL ACCESS LOCKED
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-logo" href="#top">CYRA</a>
+      <span class="barcode" aria-hidden="true"></span>
+      <p>サイバネティック・ユース・リアリティ・エージェンシー</p>
+      <p>&copy; <span id="current-year"></span> CYRA. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./data/talents.js"></script>
+    <script src="./data/news.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
