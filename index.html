@@ -68,6 +68,27 @@
             </a>
           </div>
 
+          <aside class="home-live-screen" aria-label="CYRA LIVE SCREEN">
+            <div class="live-screen-label">
+              <span>CYRA LIVE SCREEN</span>
+              <span>NOW STREAMING</span>
+            </div>
+            <div class="live-screen-frame">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+              >
+                <source src="./assets/video/cyra-live-screen.mp4" type="video/mp4" />
+              </video>
+              <div class="live-screen-placeholder" aria-hidden="true">
+                <span>LIVE FEED STANDBY</span>
+              </div>
+            </div>
+          </aside>
+
           <aside class="home-talent" aria-label="Featured talent">
             <p class="talent-number">001</p>
             <h2>夜永レイナ</h2>
@@ -79,13 +100,6 @@
             </a>
           </aside>
 
-          <aside class="home-news" aria-label="Latest news">
-            <div class="panel-heading">
-              <h2>NEWS</h2>
-              <a href="#news">VIEW ALL</a>
-            </div>
-            <div id="home-news-list" class="home-news-list"></div>
-          </aside>
         </div>
       </section>
 
