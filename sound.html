@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CYRA SOUND</title>
+    <meta
+      name="description"
+      content="CYRA所属AIアーティストの楽曲一覧ページです。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      body {
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 18% 18%, rgba(255, 79, 243, 0.16), transparent 32%),
+          radial-gradient(circle at 82% 12%, rgba(50, 217, 255, 0.14), transparent 30%),
+          linear-gradient(135deg, #020207 0%, #10051a 50%, #03131f 100%);
+      }
+
+      .sound-page {
+        width: min(100% - 40px, 1120px);
+        margin: 0 auto;
+        padding: 132px 0 80px;
+      }
+
+      .sound-hero {
+        display: grid;
+        gap: 18px;
+        margin-bottom: 34px;
+        padding-left: 28px;
+        border-left: 1px solid var(--pink);
+      }
+
+      .sound-kicker,
+      .sound-status {
+        color: var(--pink);
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        text-shadow: var(--shadow-pink);
+      }
+
+      .sound-title {
+        margin: 0;
+        color: transparent;
+        font-size: clamp(3rem, 8vw, 7rem);
+        font-weight: 400;
+        line-height: 0.95;
+        -webkit-text-stroke: 1px var(--pink);
+        text-shadow: var(--shadow-pink);
+      }
+
+      .sound-lead {
+        max-width: 680px;
+        margin: 0;
+        color: var(--text);
+        font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+        font-weight: 600;
+        line-height: 2;
+      }
+
+      .sound-panel {
+        border: 1px solid rgba(255, 79, 243, 0.42);
+        border-radius: 10px;
+        background:
+          linear-gradient(135deg, rgba(255, 79, 243, 0.08), rgba(50, 217, 255, 0.04)),
+          rgba(2, 2, 7, 0.72);
+        box-shadow:
+          inset 0 0 28px rgba(255, 79, 243, 0.08),
+          0 0 34px rgba(255, 79, 243, 0.14);
+        overflow: hidden;
+      }
+
+      .sound-list {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .sound-item {
+        display: grid;
+        grid-template-columns: auto minmax(160px, 0.8fr) minmax(360px, 1.2fr);
+        gap: 22px;
+        align-items: center;
+        min-height: 92px;
+        padding: 20px 26px;
+        border-top: 1px solid rgba(255, 79, 243, 0.18);
+      }
+
+      .sound-item:first-child {
+        border-top: 0;
+      }
+
+      .sound-number {
+        color: var(--blue);
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-shadow: var(--shadow-blue);
+      }
+
+      .sound-name {
+        color: var(--text);
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .sound-status {
+        justify-self: end;
+        color: var(--pink);
+        font-size: 0.68rem;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .sound-audio {
+        justify-self: stretch;
+        width: 100%;
+        min-width: 320px;
+        height: 42px;
+        accent-color: var(--pink);
+      }
+
+      .sound-empty {
+        display: grid;
+        min-height: 240px;
+        place-items: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 900;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+      }
+
+      .sound-back {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        margin-top: 28px;
+        padding: 0 24px;
+        border: 1px solid var(--pink);
+        background: rgba(2, 2, 7, 0.42);
+        color: var(--pink);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-shadow: var(--shadow-pink);
+        box-shadow: inset 0 0 18px rgba(255, 79, 243, 0.1), 0 0 22px rgba(255, 79, 243, 0.16);
+      }
+
+      @media (max-width: 720px) {
+        .sound-page {
+          width: min(100% - 28px, 620px);
+          padding-top: 110px;
+        }
+
+        .sound-hero {
+          padding-left: 18px;
+        }
+
+        .sound-item {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          padding: 20px;
+        }
+
+        .sound-status {
+          justify-self: start;
+        }
+
+        .sound-audio {
+          min-width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sound-page">
+      <section class="sound-hero" aria-labelledby="sound-title">
+        <p class="sound-kicker" id="sound-talent">CYRA SOUND</p>
+        <h1 class="sound-title" id="sound-title">SOUND</h1>
+        <p class="sound-lead" id="sound-lead">
+          CYRA所属AIアーティストの楽曲リストです。現在はデモタイトルのみ公開しています。
+        </p>
+      </section>
+
+      <section class="sound-panel" aria-label="Song list">
+        <ul class="sound-list" id="song-list"></ul>
+      </section>
+
+      <a class="sound-back" id="sound-back" href="./index.html#reina">← BACK TO PROFILE</a>
+
+    </main>
+
+    <script src="./data/songs.js"></script>
+    <script>
+      (() => {
+        const params = new URLSearchParams(window.location.search);
+        const talent = params.get("talent");
+        const songs = window.CYRA_SONGS || [];
+        const talentNames = {
+          reina: "REINA YONAGA",
+          neo: "NEO HOSHIWA",
+        };
+        const talentLead = {
+          reina: "夜永レイナのデモ楽曲リストです。Neon Driftを中心に、東京の夜と疾走感を描く楽曲を管理します。",
+          neo: "星環ネオのデモ楽曲リストです。ネオンブルーの鼓動と未来都市の加速を描く楽曲を管理します。",
+        };
+        const filteredSongs = songs.filter((song) => song.talent === talent);
+        const list = document.getElementById("song-list");
+        const talentLabel = document.getElementById("sound-talent");
+        const lead = document.getElementById("sound-lead");
+        const backLink = document.getElementById("sound-back");
+
+        if (talentNames[talent]) {
+          talentLabel.textContent = `${talentNames[talent]} / CYRA SOUND`;
+          lead.textContent = talentLead[talent];
+        }
+
+        if (backLink && talentNames[talent]) {
+          backLink.href = `./index.html?talent=${encodeURIComponent(talent)}#reina`;
+        }
+
+        if (!filteredSongs.length) {
+          list.innerHTML = '<li class="sound-empty">COMING SOON</li>';
+          return;
+        }
+
+        list.innerHTML = filteredSongs
+          .map((song, index) => {
+            const songControl = song.audio
+              ? `<audio class="sound-audio" src="${song.audio}" controls preload="none"></audio>`
+              : '<span class="sound-status">DEMO ONLY</span>';
+
+            return `
+              <li class="sound-item">
+                <span class="sound-number">${String(index + 1).padStart(2, "0")}</span>
+                <span class="sound-name">${song.title}</span>
+                ${songControl}
+              </li>
+            `;
+          })
+          .join("");
+
+        const audioPlayers = list.querySelectorAll("audio");
+        audioPlayers.forEach((audio) => {
+          audio.addEventListener("play", () => {
+            audioPlayers.forEach((otherAudio) => {
+              if (otherAudio === audio) return;
+              otherAudio.pause();
+              otherAudio.currentTime = 0;
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

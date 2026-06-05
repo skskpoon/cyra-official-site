@@ -283,6 +283,7 @@ img {
 }
 
 .home-layout {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(360px, 540px) minmax(320px, 1fr);
   grid-template-rows: 1fr auto;
@@ -297,6 +298,98 @@ img {
   max-width: 540px;
   padding-left: clamp(18px, 2vw, 46px);
   border-left: 1px solid var(--line);
+}
+
+.home-live-screen {
+  align-self: center;
+  justify-self: end;
+  z-index: 2;
+  width: min(820px, 100%);
+  margin-top: clamp(48px, 8vh, 110px);
+  pointer-events: none;
+}
+
+.live-screen-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  color: var(--pink);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-shadow: var(--shadow-pink);
+}
+
+.live-screen-label span:last-child {
+  color: var(--blue);
+  text-shadow: var(--shadow-blue);
+}
+
+.live-screen-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgba(255, 79, 243, 0.42);
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 72% 28%, rgba(50, 217, 255, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(255, 79, 243, 0.18), rgba(50, 217, 255, 0.08)),
+    rgba(2, 2, 7, 0.72);
+  box-shadow:
+    inset 0 0 28px rgba(255, 79, 243, 0.08),
+    0 0 28px rgba(255, 79, 243, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.live-screen-frame::before,
+.live-screen-frame::after {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  content: "";
+}
+
+.live-screen-frame::before {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.045) 0,
+    rgba(255, 255, 255, 0.045) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  opacity: 0.42;
+}
+
+.live-screen-frame::after {
+  background:
+    linear-gradient(90deg, rgba(2, 2, 7, 0.46), transparent 32%, transparent 68%, rgba(2, 2, 7, 0.52)),
+    linear-gradient(180deg, transparent 58%, rgba(2, 2, 7, 0.58));
+}
+
+.live-screen-frame video {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.live-screen-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 248, 255, 0.72);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-align: center;
 }
 
 .section-kicker {
@@ -1032,6 +1125,39 @@ body.is-lightbox-open {
   text-align: center;
 }
 
+.voice-sample .outline-button {
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: min(100%, 360px);
+  min-width: 0;
+  min-height: 76px;
+  padding: 14px 22px;
+  line-height: 1.45;
+  text-align: center;
+  white-space: normal;
+}
+
+.voice-sample .outline-button span {
+  display: inline;
+  height: auto;
+  background: none;
+  clip-path: none;
+}
+
+.voice-sample .outline-button span:first-child {
+  color: var(--pink);
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  text-shadow: var(--shadow-pink);
+}
+
+.voice-sample .outline-button span:last-child {
+  color: var(--text);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
 .waveform button,
 .movie-frame button {
   display: grid;
@@ -1564,12 +1690,14 @@ body.is-lightbox-open {
 
   .home-layout {
     grid-template-columns: 1fr;
+    row-gap: 34px;
     min-height: calc(100vh - 124px);
   }
 
   .home-copy {
     align-self: end;
-    padding: min(48vh, 390px) 28px 0;
+    order: 2;
+    padding: 0 28px;
     border-left: 0;
   }
 
@@ -1577,13 +1705,21 @@ body.is-lightbox-open {
     font-size: clamp(2.4rem, 10.8vw, 4.2rem);
   }
 
+  .home-live-screen {
+    order: 1;
+    width: calc(100% - 56px);
+    margin: 12px auto 0;
+  }
+
   .home-text {
     font-size: 1rem;
     line-height: 2;
+    margin-top: 34px;
   }
 
   .cyber-button {
     width: 100%;
+    margin-top: 42px;
     padding: 0 28px;
   }
 
@@ -1719,11 +1855,13 @@ body.is-lightbox-open {
 
   .home-layout {
     width: 100%;
-    min-height: 920px;
+    min-height: auto;
+    padding-bottom: 28px;
+    row-gap: 30px;
   }
 
   .home-copy {
-    padding: 430px 28px 0;
+    padding: 0 24px;
   }
 
   .section-kicker {
@@ -1732,6 +1870,28 @@ body.is-lightbox-open {
 
   .home-title {
     gap: 8px;
+  }
+
+  .home-live-screen {
+    width: calc(100% - 32px);
+    margin-top: 8px;
+  }
+
+  .home-text {
+    margin-top: 30px;
+  }
+
+  .cyber-button {
+    margin-top: 38px;
+  }
+
+  .live-screen-label {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
   }
 
   .home-news {

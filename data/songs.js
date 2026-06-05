@@ -1,0 +1,15 @@
+window.CYRA_SONGS = [
+  { talent: "reina", title: "Neon Drift", status: "demo", audio: "./assets/audio/reina/neon-drift.mp3" },
+  { talent: "reina", title: "Rain Signal", status: "demo", audio: "./assets/audio/reina/rain-signal.mp3" },
+  { talent: "reina", title: "Last Train", status: "demo", audio: "./assets/audio/reina/last-train.mp3" },
+  { talent: "reina", title: "City Lights", status: "demo", audio: "./assets/audio/reina/city-lights.mp3" },
+  { talent: "reina", title: "Midnight Window", status: "demo", audio: "./assets/audio/reina/midnight-window.mp3" },
+  { talent: "reina", title: "After Rain Drive", status: "demo", audio: "./assets/audio/reina/after-rain-drive.mp3" },
+  { talent: "reina", title: "Green Light", status: "demo", audio: "./assets/audio/reina/green-light.mp3" },
+  { talent: "neo", title: "City Beat", status: "demo", audio: "./assets/audio/neo/city-beat.mp3" },
+  { talent: "neo", title: "Full Speed", status: "demo", audio: "./assets/audio/neo/full-speed.mp3" },
+  { talent: "neo", title: "Ignition", status: "demo", audio: "./assets/audio/neo/ignition.mp3" },
+  { talent: "neo", title: "Heartbeat Lane", status: "demo", audio: "./assets/audio/neo/heartbeat-lane.mp3" },
+  { talent: "neo", title: "Rush Hour", status: "demo", audio: "./assets/audio/neo/rush-hour.mp3" },
+  { talent: "neo", title: "Signal Lost", status: "demo", audio: "./assets/audio/neo/signal-lost.mp3" },
+];

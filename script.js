@@ -36,6 +36,16 @@
     profileDetails: document.querySelector("#profile-details"),
     snsList: document.querySelector("#sns-list"),
     galleryList: document.querySelector("#gallery-list"),
+    voiceSample: document.querySelector(".voice-sample .waveform"),
+  };
+
+  const soundTalentSlugs = {
+    "001": "reina",
+    "002": "neo",
+  };
+  const profileTalentIds = {
+    reina: "001",
+    neo: "002",
   };
 
   function createElement(tagName, className, text) {
@@ -172,6 +182,11 @@
     return new URLSearchParams(window.location.search).get("id");
   }
 
+  function getProfileTalentIdFromUrl() {
+    const talent = new URLSearchParams(window.location.search).get("talent");
+    return profileTalentIds[talent] || "001";
+  }
+
   function renderNewsDetail(newsId, shouldScroll = true) {
     if (!selectors.newsDetail) return;
 
@@ -292,6 +307,25 @@
     selectors.galleryList.replaceChildren(...gallery);
   }
 
+  function renderSoundArchiveLink(talent) {
+    if (!selectors.voiceSample) return;
+
+    const soundTalentSlug = soundTalentSlugs[talent.id];
+    if (!soundTalentSlug) {
+      selectors.voiceSample.replaceChildren(createElement("p", null, "UNDER DEVELOPMENT"));
+      return;
+    }
+
+    const link = createElement("a", "outline-button");
+    link.href = `./sound.html?talent=${encodeURIComponent(soundTalentSlug)}`;
+    link.append(
+      createElement("span", null, "SOUND ARCHIVE"),
+      createElement("span", null, "曲一覧を見る →"),
+    );
+
+    selectors.voiceSample.replaceChildren(link);
+  }
+
   function setImageSource(image, src, alt) {
     if (!image || !src) return;
 
@@ -338,6 +372,7 @@
     renderProfileDetails(selectedTalent);
     renderSns(selectedTalent);
     renderGallery(selectedTalent);
+    renderSoundArchiveLink(selectedTalent);
   }
 
   function showImagePlaceholder(image) {
@@ -518,7 +553,7 @@
 
     renderTalents();
     renderHomeNews();
-    renderFeaturedTalent("001");
+    renderFeaturedTalent(getProfileTalentIdFromUrl());
     renderNews();
     renderAllNews();
     enableImageFallbacks();

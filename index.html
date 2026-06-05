@@ -6,7 +6,7 @@
     <title>CYRA | Cybernetic Youth Reality Agency</title>
     <meta
       name="description"
-      content="AIアイドルプロジェクトCYRAの公式サイトです。"
+      content="AIアーティスト事務所兼クリエイティブスタジオCYRAの公式サイトです。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -24,7 +24,7 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="#top">TOP</a>
-        <a href="#talents">TALENTS</a>
+        <a href="#talents">ARTISTS</a>
         <a href="#news">NEWS</a>
         <a href="#account">ACCOUNT</a>
       </nav>
@@ -60,32 +60,46 @@
               <span>AGENCY</span>
             </h1>
             <p class="home-text">
-              CYRA（サイラ）は、サイバーパンクな未来を舞台に、AIと人間の境界を超えて輝くタレントたちを発掘し、リアルとバーチャルの垣根を越えた新しいリアリティを創造する次世代タレントエージェンシーです。
+              CYRA（サイラ）は、未来都市の空気、音、感情、景色、熱量を、音楽・映像・人格を通して具現化するAIアーティスト事務所兼クリエイティブスタジオです。
             </p>
             <a class="cyber-button" href="#talents">
-              <span>VIEW TALENTS</span>
+              <span>VIEW ARTISTS</span>
               <span aria-hidden="true">→</span>
             </a>
           </div>
+
+          <aside class="home-live-screen" aria-label="CYRA LIVE SCREEN">
+            <div class="live-screen-label">
+              <span>CYRA LIVE SCREEN</span>
+              <span>NOW STREAMING</span>
+            </div>
+            <div class="live-screen-frame">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+              >
+                <source src="./assets/video/cyra-live-screen.mp4" type="video/mp4" />
+              </video>
+              <div class="live-screen-placeholder" aria-hidden="true">
+                <span>LIVE FEED STANDBY</span>
+              </div>
+            </div>
+          </aside>
 
           <aside class="home-talent" aria-label="Featured talent">
             <p class="talent-number">001</p>
             <h2>夜永レイナ</h2>
             <p>REINA YONAGA</p>
-            <p class="talent-role">AI IDOL / CYRA TALENT</p>
+            <p class="talent-role">AI ARTIST / CYRA ARTIST</p>
             <a class="outline-button" href="#reina">
               <span>VIEW PROFILE</span>
               <span aria-hidden="true">→</span>
             </a>
           </aside>
 
-          <aside class="home-news" aria-label="Latest news">
-            <div class="panel-heading">
-              <h2>NEWS</h2>
-              <a href="#news">VIEW ALL</a>
-            </div>
-            <div id="home-news-list" class="home-news-list"></div>
-          </aside>
         </div>
       </section>
 
@@ -96,9 +110,9 @@
       >
         <div class="section-frame">
           <div class="section-heading">
-            <p class="section-kicker">所属タレント一覧</p>
-            <h2 id="talents-title">TALENTS</h2>
-            <p>CYRAに所属する次世代タレントたちをご紹介します。</p>
+            <p class="section-kicker">所属アーティスト一覧</p>
+            <h2 id="talents-title">ARTISTS</h2>
+            <p>CYRAに所属する次世代AIアーティストたちをご紹介します。</p>
           </div>
 
           <div id="talent-list" class="talent-grid" aria-live="polite"></div>
@@ -113,7 +127,7 @@
             </div>
             <h3>CYRA MISSION</h3>
             <p>
-              サイバネティックな未来を舞台に、AIと人間の境界を超えて輝くタレントたちを発掘し、リアルとバーチャルの垣根を越えた新しいリアリティを創造する次世代タレントエージェンシー。
+              未来都市の空気、音、感情、景色、熱量を、音楽・映像・人格を通して具現化するAIアーティスト事務所兼クリエイティブスタジオ。
             </p>
             <span class="barcode" aria-hidden="true"></span>
           </div>
@@ -126,7 +140,7 @@
         aria-labelledby="featured-talent-name"
       >
         <div class="profile-shell">
-          <a class="back-link" href="#talents">← BACK TO TALENTS</a>
+          <a class="back-link" href="#talents">← BACK TO ARTISTS</a>
 
           <figure class="profile-media">
             <img
@@ -136,17 +150,17 @@
             />
             <figcaption>
               <span>001</span>
-              <span>CYRA TALENT ID</span>
+              <span>CYRA ARTIST ID</span>
             </figcaption>
           </figure>
 
           <article class="profile-panel">
             <div class="profile-id">
               <span>001</span>
-              <small>CYRA TALENT ID</small>
+              <small>CYRA ARTIST ID</small>
             </div>
 
-            <p class="section-kicker">AI IDOL / CYRA TALENT</p>
+            <p class="section-kicker">AI ARTIST / CYRA ARTIST</p>
             <h2 id="featured-talent-name">夜永レイナ</h2>
             <p id="featured-talent-romaji" class="romaji">REINA YONAGA</p>
             <p id="featured-talent-profile" class="profile-text"></p>
@@ -193,7 +207,7 @@
             <div class="section-heading compact-heading">
               <p class="section-kicker">お知らせ</p>
               <h2 id="news-title">NEWS</h2>
-              <p>CYRAに関する最新情報や、所属タレントの活動情報をお届けします。</p>
+              <p>CYRAに関する最新情報や、所属アーティストの活動情報をお届けします。</p>
             </div>
             <div id="news-list" class="news-list" aria-live="polite"></div>
           </div>
@@ -202,10 +216,10 @@
             <div class="aside-visual" aria-hidden="true"></div>
             <div class="upcoming-panel">
               <h3>UPCOMING</h3>
-              <p><span>003</span> NEW TALENT<br />COMING SOON</p>
-              <p><span>004</span> NEW TALENT<br />COMING SOON</p>
+              <p><span>003</span> NEW ARTIST<br />COMING SOON</p>
+              <p><span>004</span> NEW ARTIST<br />COMING SOON</p>
               <a class="outline-button" href="#talents">
-                <span>VIEW ALL TALENTS</span>
+                <span>VIEW ALL ARTISTS</span>
                 <span aria-hidden="true">→</span>
               </a>
             </div>
