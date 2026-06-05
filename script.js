@@ -278,7 +278,9 @@
   function renderSns(talent) {
     if (!selectors.snsList) return;
 
-    const links = (talent.sns || []).map((sns) => {
+    const links = (talent.sns || [])
+      .filter((sns) => sns.name !== "Instagram")
+      .map((sns) => {
       const link = createElement("a", "sns-link");
       link.href = sns.url;
       link.append(
