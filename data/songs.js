@@ -6,6 +6,8 @@ window.CYRA_SONGS = [
   { talent: "reina", title: "Midnight Window", status: "demo", audio: "./assets/audio/reina/midnight-window.mp3" },
   { talent: "reina", title: "After Rain Drive", status: "demo", audio: "./assets/audio/reina/after-rain-drive.mp3" },
   { talent: "reina", title: "Green Light", status: "demo", audio: "./assets/audio/reina/green-light.mp3" },
+  { talent: "reina", title: "Overtake", status: "demo", audio: "./assets/audio/reina/overtake.mp3" },
+  { talent: "reina", title: "Shien", status: "demo", audio: "./assets/audio/reina/shien.mp3" },
   { talent: "neo", title: "City Beat", status: "demo", audio: "./assets/audio/neo/city-beat.mp3" },
   { talent: "neo", title: "Full Speed", status: "demo", audio: "./assets/audio/neo/full-speed.mp3" },
   { talent: "neo", title: "Ignition", status: "demo", audio: "./assets/audio/neo/ignition.mp3" },
