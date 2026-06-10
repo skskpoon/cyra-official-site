@@ -1519,6 +1519,36 @@ body.is-lightbox-open {
   display: block;
 }
 
+.board-link-panel {
+  margin-bottom: 18px;
+  padding: 24px 28px;
+  border: 1px solid var(--line-blue);
+  background:
+    linear-gradient(135deg, rgba(50, 217, 255, 0.1), transparent 44%),
+    rgba(6, 4, 14, 0.76);
+}
+
+.board-link-panel h3 {
+  margin: 0 0 14px;
+  color: var(--blue);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-shadow: var(--shadow-blue);
+}
+
+.board-link-panel p {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.board-link-panel .outline-button {
+  width: 100%;
+  min-height: 50px;
+}
+
 .upcoming-panel {
   padding: 28px;
   border: 1px solid var(--line);

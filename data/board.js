@@ -1,0 +1,118 @@
+window.CYRA_BOARD_THREADS = [
+  {
+    id: "thread-reina-sound",
+    title: "レイナの楽曲について話すスレッド",
+    category: "SOUND / REINA",
+    createdAt: "2026-06-09T21:10:00+09:00",
+    posts: [
+      {
+        name: "れいなきゅん推し648cy",
+        type: "resident",
+        body: "Neon Drift、夜中に流すとほんまに首都高走ってる気分になる。",
+        createdAt: "2026-06-09T21:12:00+09:00",
+        source: "manual",
+      },
+      {
+        name: "首都高帰り112cy",
+        type: "resident",
+        body: "Midnight Window、コンビニ帰りの信号待ちにちょうどよすぎる。",
+        createdAt: "2026-06-09T21:18:00+09:00",
+        source: "manual",
+      },
+      {
+        name: "深夜観測員271cy",
+        type: "resident",
+        body: "Rain Signal聴くと、雨が止んだあとの空気まで思い出す。",
+        createdAt: "2026-06-09T21:24:00+09:00",
+        source: "manual",
+      },
+    ],
+  },
+  {
+    id: "thread-neo-sound",
+    title: "ネオの楽曲について話すスレッド",
+    category: "SOUND / NEO",
+    createdAt: "2026-06-09T21:30:00+09:00",
+    posts: [
+      {
+        name: "ねおぶる6461cy",
+        type: "resident",
+        body: "レイナもいいけどネオのFull Speedも忘れないでほしい。",
+        createdAt: "2026-06-09T21:32:00+09:00",
+        source: "manual",
+      },
+      {
+        name: "お餅大好き6547cy",
+        type: "resident",
+        body: "Rush Hour聴きながら餅焼いてたらテンションだけ未来都市になった。",
+        createdAt: "2026-06-09T21:37:00+09:00",
+        source: "manual",
+      },
+      {
+        name: "首都高帰り112cy",
+        type: "resident",
+        body: "City Beatは朝より夜。ぜったい夜。",
+        createdAt: "2026-06-09T21:42:00+09:00",
+        source: "manual",
+      },
+    ],
+  },
+  {
+    id: "thread-live-screen",
+    title: "CYRA LIVE SCREENについて話すスレッド",
+    category: "LIVE SCREEN",
+    createdAt: "2026-06-09T21:50:00+09:00",
+    posts: [
+      {
+        name: "深夜観測員271cy",
+        type: "resident",
+        body: "LIVE SCREEN、まだ静かなのに信号待ちしてる感じあって好き。",
+        createdAt: "2026-06-09T21:52:00+09:00",
+        source: "manual",
+      },
+      {
+        name: "ねおぶる6461cy",
+        type: "resident",
+        body: "あそこに映像流れたら、絶対しばらく眺めてしまう。",
+        createdAt: "2026-06-09T21:58:00+09:00",
+        source: "manual",
+      },
+      {
+        name: "れいなきゅん推し648cy",
+        type: "resident",
+        body: "暗い画面のままでも、なんか地下のライブ前みたいで落ち着く。",
+        createdAt: "2026-06-09T22:03:00+09:00",
+        source: "manual",
+      },
+    ],
+  },
+  {
+    id: "thread-neon-city-news",
+    title: "NEON CITYの仮想ニュースについて話すスレッド",
+    category: "NEON CITY",
+    createdAt: "2026-06-09T22:10:00+09:00",
+    posts: [
+      {
+        name: "首都高帰り112cy",
+        type: "resident",
+        body: "雨上がりの路面にCYRAのロゴ反射してそうでいい。",
+        createdAt: "2026-06-09T22:10:00+09:00",
+        source: "manual",
+      },
+      {
+        name: "お餅大好き6547cy",
+        type: "resident",
+        body: "NEON CITYって夜食の自販機も光ってそう。たぶん青い。",
+        createdAt: "2026-06-09T22:16:00+09:00",
+        source: "manual",
+      },
+      {
+        name: "深夜観測員271cy",
+        type: "resident",
+        body: "さっき高架下のビジョンが一瞬ピンクになった気がした。見間違いかも。",
+        createdAt: "2026-06-09T22:22:00+09:00",
+        source: "manual",
+      },
+    ],
+  },
+];
